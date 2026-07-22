@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    background:lightgoldenrodyellow;
+    color:black;
+    margin: 0;
+    padding: 20px;
+  }
+  .navbar {
+    background-color: wheat;
+    overflow: hidden;
+    display: flex;
+    justify-content: left;
+    padding: 5px 0;
+  }
+  .navbar a {
+    float: left;
+    color: black;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+  .navbar a:hover {
+    background-color: #fff;
+    color: #111;
+    border-radius: 5px;
+  }

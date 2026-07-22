@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>CONTACT US</title>
+        <link rel="stylesheet" href="/src/css/ecternal.css">
+       <style>
+        body {
+      font-family: Arial, sans-serif;
+      background: white;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+        .p{
+            text-align: center;
+            color: #111;
+        }
+        .container{
+       padding: 10px;
+        display: flex; /*to use flexbox*/
+        justify-content: center; /*to center the items in the container*/
+        margin-top: 20px; /*to add space between the items*/
+        gap: 10px; /*to add space between the items*/
+        flex-wrap: wrap; /*to wrap the items in the next line*/
+        display:grid;/*to use grid*/
+        }
+        .items{
+          padding: 10px;
+          margin: 10px;
+        background-color: rgb(212, 204, 204); /*to set the background color*/
+       display:grid;/*to use grid*/
+       align-items: center;
+       overflow: hidden;/*to hide the overflow*/
+       box-shadow: 0 4px 8px rgba(0,0,0,0.2);/* shadow effect */
+    }
+
+       </style>
+       
+    </head>
+    <body>
+        <div class="navbar">
+          <a href="/src/html/home.html">Home</a>
+          <a href="/src/html/product.html">Products</a>
+          <a href="/src/html/blog.html">Blog</a>
+          <a href="/src/html/contact.html">Contact Us</a>
+          <a href="/src/html/about.html">About Us</a>
+          <a href="/src/html/research.html">Research</a>
+        </div>
+        <h1 style="text-align:center;color:black;font-family:arial;"> MASH SHOES<br>
+        </h1>
+        <strong><P style="color:black;text-align: center;">Kamal pokhari</P>
+        <h3 style="text-align:center;color:black;font-family:arial;"> CONTACT US<br></h3>
+        <p class="p">If you have any questions, comments, or concerns, please feel free to reach out to us using the contact information below: 
+        </p>
+      </strong>
+        <div class="container">
+          <div class="items">
+        
+         <form method="post">
+          <p style="color: black;"><strong> Number: 9812364575</strong></p> <br>
+          <button type="submit" onclick="call()">
+            <strong>Call</strong>
+          </button><br><br>
+          <p style="color:black;"><strong>EMAIL: mashOES@gmail.com</strong></p><br>
+          <button type="submit" onclick="email()">
+           <strong>Email us</strong> 
+          </button><br><br>
+          <p style="color:black;"><strong>CONTACT US ON WHATSAPP</strong></p><br>
+          <button type="submit" onclick="whatsapp()">
+            <strong>WhatsApp Us</strong>
+          </button><br><br>
+
+         </form>
+      </div>
+</div>
+<script>
+// Function to open phone dialer
+    function call() {
+        window.location.href = "tel:9812364575"; // Replace with the actual phone number
+    }
+// Function to open email client
+    function email() {
+        window.location.href = "mailto:mashOES@gmail.com";
+    }
+// Function to open WhatsApp chat
+    function whatsapp() {
+        window.location.href = "https://wa.me/9812364575"; // Replace with the actual WhatsApp number
+    }
+</script>
+      
+    </body>
+</html>

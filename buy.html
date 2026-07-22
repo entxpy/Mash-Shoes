@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Buy1</title>
+  <!--connecting external CSS-->
+  <link rel="stylesheet" href="/src/css/ecternal.css">
+  <style>
+ 
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #111;
+    }
+    .form-container {
+      background-color: #f0f0f0;
+      color: #000;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 30px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);/* shadow effect */
+    }
+    /*.form-container label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }*/
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-container .payment-method {
+      margin-bottom: 20px;
+    }
+    .form-container .payment-method {
+      display: inline;/* inline CSS for radio buttons */
+      margin-right: 20px;
+    }
+    .form-container input[type="submit"] {
+      background-color: yellow;
+      color: #000;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;/* pointer cursor for button */
+      
+    }
+   /* .form-container input[type="submit"]:hover {
+      background-color: gold;
+      transform: scale(1.05);/* slightly enlarge button on hover 
+    }*/
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="/src/html/home.html">Home</a>
+    <a href="/src/html/product.html">Products</a>
+    <a href="/src/html/blog.html">Blog</a>
+    <a href="/src/html/contact.html">Contact Us</a>
+    <a href="/src/html/about.html">About Us</a>
+    <a href="/src/html/research.html">Research</a>
+  </div>
+  <h1>PLACE YOUR ORDER HERE!</h1>
+  <div class="form-container">
+    <!--use of form tag-->
+    <form action="/src/html/order-success.html" method="get" required>
+      <!-- form action to redirect to order-success.html -->
+        FIRST NAME:<input type="text" name="name" required >
+        ADDRESS: <input type="text" name="address" required>
+        PHONE NUMBER:<input type="tel" name="tel" required>
+        EMAIL: <input type="text" name="email" required>
+        <div class="payment-method">
+           ONLINE:<input type="radio" name="payment" value="online" required>
+           COD:<input type="radio" name="payment" value="cod" required>
+          </div>
+          <br>
+          <input type="submit" value="Place Order">
+    </form>
+  </div>
+</body>
+</html>

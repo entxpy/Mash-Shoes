@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!--link for Font Awesome for star rating--> 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: white;
+      /*color: #fff;*/
+      margin: 0;
+      padding: 20px;
+    }
+    .navbar{
+      
+      background-color: rgb(228, 225, 225);
+     overflow: hidden;
+     display: flex;
+     justify-content: left;
+     padding: 5px 0;
+
+ }
+ .navbar a{
+  float: left;
+  color: black;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+ }
+ .navbar a:hover{
+  background-color: #fff;
+  color: #111;
+  border-radius: 5px;
+ }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #111;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #f0f0f0;
+      color: #000;
+      border-radius: 10px;
+      overflow: hidden;/* rounded corners */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);/* shadow effect */
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 15px 0 5px;
+    }
+    .card p {
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .buy-btn{
+  background-color: yellow;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+ }
+ .buy-btn:hover{
+  background-color: gold;
+  transform: scale(1.05);
+ }
+    footer {
+      background-color: white;
+      color: black;
+      text-align: center;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+
+    footer a:link,
+    footer a:visited {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .search-container{
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .search-container input[type="text"]{
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+      background-color: white;
+      color: black;
+    }
+    .search-container .search-button{
+      padding: 8px 12px;
+      background-color:white ;
+      color: black;
+      border: none;
+      border-radius: 4px;
+      cursor:pointer;
+      font-weight: bold;
+    }
+    div{
+        flex: wrap;
+    }
+    .container{
+        display: flex; /*to use flexbox*/
+        justify-content: left; /*to left the items in the container*/
+        margin-top: 20px; /*to add space between the items*/
+        margin-bottom: 60px; /*to add space between the items*/
+        gap: 20px; /*to add space between the items*/
+        flex-wrap: wrap; /*to wrap the items in the next line*/
+        width: 100%;
+        }
+    .items{
+       display:grid;/*to use grid*/
+       align-items: center;
+       overflow: hidden;/*to hide the overflow*/
+       box-shadow: 0 4px 8px rgba(0,0,0,0.2);/* shadow effect */
+    }
+    /*styling images in items*/
+    .items img{
+        width: auto;
+        height: 400px;
+        display: block;/*to make the image block*/
+        object-fit: cover;/*to make the image cover the whole div*/
+    }
+    .items p{
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+    /*creating a star rating system*/
+    .checked {
+        color: orange;
+        }
+  </style>
+</head>
+<div class="navbar">
+  <a href="/src/html/home.html">Home</a>
+  <a href="/src/html/product.html">Products</a>
+  <a href="/src/html/blog.html">Blog</a>
+  <a href="/src/html/contact.html">Contact Us</a>
+  <a href="/src/html/about.html">About Us</a>
+  <a href="/src/html/research.html">Research</a>
+    <input type="text" placeholder="Search" >
+    <button class="search-button">Search</button>
+  </div>
+  
+</div>
+
+<body>
+  <h1>MASH Shoe Collection</h1>
+  <div class="container">
+    <div class="items">
+        <img src="/src/image/men1.jpg" alt="nike1" >    
+    </div>
+    <b>
+      <p style="color: black;">Nike SB Janoski+ Slip Skate Shoes 
+        <br> Price $95
+         <br> Inclusive of all taxes <br> 
+        
+        <table border="2" style="color:black"><!--creating a table-->
+            <tr><!--creating a row-->
+                <th>Ratings</th><!--creating a column-->
+                <th><!--creating a star rating system-->
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked" ></span>
+                    <span class="fa fa-star"></span>
+                </th>
+                </tr>
+                <tr>
+                <td> Review</td>
+                <td> Rated by 142 people</td>
+                </tr>
+        </table>
+        <br>
+        <form onsubmit=""><!--use of form -->
+            <b style="color:black">SIZES:</b>
+            <select name="size" id="size" required><!--creating a drop-down list-->
+                <option value="">Select Size</option>
+                <option value="6">UK6</option>
+                <option value="7">UK7</option>
+                <option value="8">UK8</option>
+                <option value="9">UK9</option>
+                <option value="10">UK10</option>
+                <option value="11">UK11</option>
+                <option value="12">UK12</option>
+                </select>
+        </form>
+        <br>
+        <strong style="color:black">your review:</strong>
+        <form onsubmit=""><!--use of form -->
+            <textarea name="message" rows="4" cols="40" placeholder=" write your review here..." style="color:black;">write your review here...
+            </textarea><!--creating a text area-->
+            <br>
+            <input type="submit" value="Submit" style="color:black"><!--creating a submit button-->
+            </form><br>
+        <button class="buy-btn" onclick="location.href='/src/html/cart.html'">Add to cart</button>
+        <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+  
+    <div class="grid-container">
+      <div class="card">
+        <img src="/src/image/men1.jpg">
+        <!--<h3>Air Max 2025</h3>-->
+         <p>Price $120</p>
+         <button class="buy-btn" onclick="cart()">Add to cart</button>
+         <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+       </div>
+       <div class="card">
+        <a href="/src/html/comment.html"><img src="/src/image/men2.jpg"></a> 
+         <!--<h3>Nike SB Janoski+ Slip Skate </h3>-->
+         <p>Price $95</p>
+         <button class="buy-btn" onclick="cart()">Add to cart</button>
+         <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+       </div>
+       <div class="card">
+         <img src="/src/image/men3.jpg">
+        <!-- <h3>Nike Stefan</h3>-->
+         <del>Price $105</del> <p> Price $90</p>
+         <button class="buy-btn" onclick="cart()">Add to cart</button>
+         <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+       </div>
+       <div class="card">
+         <img src="/src/image/men4.jpg">
+        <!--<h3>Nike Free Run 5.0</h3>-->
+         <del>Price $100</del> <p>Price $89</p>
+         <button class="buy-btn" onclick="cart()">Add to cart</button>
+         <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+       </div>
+       <div class="card">
+         <img src="/src/image/men5.jpg">
+        <!--<h3>Nike Waffle Nav Sneakers</h3>-->
+         <p>Price$87</p>
+         <button class="buy-btn" onclick="cart()">Add to cart</button>
+         <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+       </div>
+       <div class="card">
+        <a href="/src/html/comment2.html"> <img src="/src/image/men6.jpg"></a>
+        <!-- <h3>Nike Air Force 1</h3>-->
+         <p>Price $120</p>
+         <button class="buy-btn" onclick="cart()">Add to cart</button>
+         <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+       </div>
+       <div class="card">
+         <img src="/src/image/men7.jpg">
+         <!--<h3>Nike Vomero 18</h3>-->
+         <p>Price $74</p>
+         <button class="buy-btn" onclick="cart()">Add to cart</button>
+         <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+       </div>
+       <div class="card">
+         <img src="/src/image/men8.jpg">
+        <!--<h3>Nike Air Zoom Structure 24 </h3>-->
+         <p>Price $95</p>
+         <button class="buy-btn" onclick="cart()">Add to cart</button>
+         <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+       </div>
+       <div class="card">
+         <img src="/src/image/men9.jpg">
+        <!-- <h3>Nike Waffle Nav Sneakers</h3>-->
+         <p>Price $87</p>
+         <button class="buy-btn" onclick="cart()">Add to cart</button>
+         <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+       </div>
+       <div class="card">
+         <img src="/src/image/men10.jpg">
+         <!--<h3>Air Jordan</h3>-->
+         <p>Price $150</p>
+         <button class="buy-btn" onclick="cart()">Add to cart</button>
+         <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+       </div>
+       <div class="card">
+         <img src="/src/image/men11.jpg">
+         <!--<h3>Nike Stefan</h3>-->
+         <p>Price $105</p>
+         <button class="buy-btn" onclick="cart()">Add to cart</button>
+         <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+       </div>
+       <div class="card">
+         <img src="/src/image/men12.jpg">
+         <!--<h3>Nike SB Janoski+ Slip Skate Shoes</h3>-->
+         <p>Starting at $95</p>
+         <button class="buy-btn" onclick="cart()">Add to cart</button>
+         <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+       </div>
+       <div class="card">
+         <img src="/src/image/men13.jpg">
+         <!--<h3>Nike Free Run 5.0</h3>-->
+         <p>Starting at $100</p>
+         <button class="buy-btn" onclick="cart()">Add to cart</button>
+         <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+       </div>
+       <div class="card">
+         <img src="/src/image/men14.jpg">
+         <!--<h3>Air Jordan 1</h3>-->
+         <p>Starting at $150</p>
+         <button class="buy-btn" onclick="cart()">Add to cart</button>
+         <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+       </div>
+       <div class="card">
+         <img src="/src/image/men3.jpg">
+         <!--<h3>Nike Stefan</h3>-->
+         <del>Price $105</del> <p> Price $90</p>
+         <button class="buy-btn" onclick="cart()">Add to cart</button>
+         <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+       </div>
+     </div>
+  
+  <footer>
+    <p>&copy; 2025 MASH SHOES, All rights reserved &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="/src/html/terms.html">Terms Of Sale</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+      
+      <a href="/src/html/use.html">Terms Of Use</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+      
+      <a href="/src/html/use.html">Privacy Policy</a>
+      
+    </p>
+  </footer>
+</body>
+</html>

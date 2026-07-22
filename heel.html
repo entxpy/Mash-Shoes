@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products</title>
+  <style>
+     body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:lightgoldenrodyellow;
+      color: BLACK;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar{
+     background-color: wheat;
+     overflow: hidden;
+     display: flex;
+     justify-content: left;
+     padding: 5px 0;
+ }
+ .navbar a{
+  float: left;
+  color: black;
+  padding: 14px 20px;
+  text-decoration:underline;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+ }
+ .navbar a:hover{
+  background-color: #fff;
+  color: #111;
+  border-radius: 5px;
+ }
+ .navbar a:visited{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+ }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #111;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #f0f0f0;
+      color: #000;
+      border-radius: 10px;
+      overflow: hidden;/* rounded corners */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);/* shadow effect */
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 15px 0 5px;
+    }
+    .card p {
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .buy-btn{
+  background-color: yellow;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+ }
+ .buy-btn:hover{
+  background-color: gold;
+  transform: scale(1.05);
+ }
+    footer {
+      background-color: white;
+      color: black;
+      text-align: center;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+
+    footer a:link,
+    footer a:visited {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .search-container{
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .search-container input[type="text"]{
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+      background-color: white;
+      color: black;
+    }
+    .search-container .search-button{
+      padding: 8px 12px;
+      background-color:white ;
+      color: black;
+      border: none;
+      border-radius: 4px;
+      cursor:pointer;
+      font-weight: bold;
+    }
+    .cart{
+      background-color: white;
+      color: black;
+      padding: 10px;
+      overflow: hidden;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);/* shadow effect */
+
+    }
+  </style>
+</head>
+<div class="navbar">
+  <a href="/src/html/home.html" style="color: black;">Home</a>
+  <a href="/src/html/men.html">MEN</a>
+  <a href="/src/html/women.html">WOMEN</a>
+  <a href="/src/html/kids.html">KIDS</a>
+  <a href="/src/html/heel.html">HEEL</a>
+  <a href="/src/html/blog.html">Blog</a>
+  <a href="/src/html/contact.html">Contact Us</a>
+  <a href="/src/html/about.html">About Us</a>
+  <a href="/src/html/research.html">Research</a>
+  <div class="search-container">
+    <input type="text" placeholder="Search" >
+    <button class="search-button">Search</button>
+  </div>
+  
+</div>
+<body>
+  <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">HEELS Collection</h1>
+  <div class="grid-container">
+    <div class="card">
+     <img src="/src/image/heel1.jpg">
+     <!--<h3>Air Max 2025</h3>-->
+      <p>Price $120</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+     <a href="/src/html/comment.html"><img src="/src/image/heel2.jpg"></a> 
+      <!--<h3>Nike SB Janoski+ Slip Skate </h3>-->
+      <p>Price $95</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+      <img src="/src/image/heel3.jpg">
+     <!-- <h3>Nike Stefan</h3>-->
+      <del>Price $105</del> <p> Price $90</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+      <img src="/src/image/heel4.jpg">
+     <!--<h3>Nike Free Run 5.0</h3>-->
+      <del>Price $100</del> <p>Price $89</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+      <img src="/src/image/heel5.jpg">
+     <!--<h3>Nike Waffle Nav Sneakers</h3>-->
+      <p>Price$87</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+     <a href="/src/html/comment2.html"> <img src="/src/image/heel6.jpg"></a>
+     <!-- <h3>Nike Air Force 1</h3>-->
+      <p>Price $120</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+      <img src="/src/image/heel7.jpg">
+      <!--<h3>Nike Vomero 18</h3>-->
+      <p>Price $74</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+      <img src="/src/image/heel8.jpg">
+     <!--<h3>Nike Air Zoom Structure 24 </h3>-->
+      <p>Price $95</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+      <img src="/src/image/heel9.jpg">
+     <!-- <h3>Nike Waffle Nav Sneakers</h3>-->
+      <p>Price $87</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+      <img src="/src/image/heel10.jpg">
+      <!--<h3>Air Jordan</h3>-->
+      <p>Price $150</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+      <img src="/src/image/heel11.jpg">
+      <!--<h3>Nike Stefan</h3>-->
+      <p>Price $105</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+      <img src="/src/image/heel12.jpg">
+      <!--<h3>Nike SB Janoski+ Slip Skate Shoes</h3>-->
+      <p>Starting at $95</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+      <img src="/src/image/heel13.jpg">
+      <!--<h3>Nike Free Run 5.0</h3>-->
+      <p>Starting at $100</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+      <img src="/src/image/heel14.jpg">
+      <!--<h3>Air Jordan 1</h3>-->
+      <p>Starting at $150</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+      <img src="/src/image/heel15.jpg">
+      <!--<h3>Nike Stefan</h3>-->
+      <del>Price $105</del> <p> Price $90</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+    <img src="/src/image/heel16.jpg">
+      <!--<h3>Nike Stefan</h3>-->
+      <del>Price $105</del> <p> Price $90</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+    <img src="/src/image/heel17.jpg">
+      <!--<h3>Nike Stefan</h3>-->
+      <del>Price $105</del> <p> Price $90</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+    <img src="/src/image/heel18.jpg">
+      <!--<h3>Nike Stefan</h3>-->
+      <del>Price $105</del> <p> Price $90</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+    <img src="/src/image/heel19.jpg">
+      <!--<h3>Nike Stefan</h3>-->
+      <del>Price $105</del> <p> Price $90</p>
+      <button class="buy-btn" onclick="cart()">Add to cart</button>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+    </div>
+    <div class="card">
+        <img src="/src/image/heel4.jpg">
+          <!--<h3>Nike Stefan</h3>-->
+          <del>Price $105</del> <p> Price $90</p>
+          <button class="buy-btn" onclick="cart()">Add to cart</button>
+          <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+        </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 MASH SHOES, All rights reserved &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="/src/html/terms.html">Terms Of Sale</a>&nbsp;&nbsp;|&nbsp;&nbsp;  
+      <a href="/src/html/use.html">Terms Of Use</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="/src/html/use.html">Privacy Policy</a>
+      
+    </p>
+  </footer>
+  <script>//Use of internal javascript to add functionality to the button
+    function cart() {
+      alert("Item added to cart!");//alert message
+    }
+  </script>
+</body>
+</html>

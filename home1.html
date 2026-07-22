@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page</title>
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/CSS/style1.css"><!-- external css file -->
+  <style>
+    /* styling body */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:lightgoldenrodyellow;
+      color: BLACK;
+      margin: 0;
+      padding: 10px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .main-content {
+      flex: 1;
+    }
+    header {
+      height: 150px; /* increase height */
+      background-color: lightgoldenrodyellow;
+      color: black;
+      display: flex;
+      text-align: center;
+      padding-top: 10px; /* optional, for spacing text inside */
+    }
+
+/*H1 tag of header or styling header tag*/
+      h1 {
+      text-align: center;
+      font-family: Forte, cursive;
+      color:black;
+      padding: 5px 50px;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+/*navbar*/
+    .navbar{
+     background-color:wheat;/*to set the background color */
+     overflow: hidden;
+     display: flex;
+     justify-content: center;
+     padding: 5px 0;
+
+ }
+ /*navbar link*/
+ .navbar a{
+  float: center;
+  color:black;
+  padding: 14px 20px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+ }
+ /*navbar link visited*/
+  .navbar a:visited{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+ }
+ /*navbar hover*/
+ .navbar a:hover{
+  background-color: black;
+  color:white;
+  /*border-radius: 5px;*/
+ }
+/*search bar*/
+ .search-container{
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    }
+    /*flexbox*/
+    div{
+        flex: wrap;
+    }
+       .container{
+        display: flex; /*to use flexbox*/
+        justify-content: center; /*to center the items in the container*/
+        margin-top: 40px; /*to add space between the items*/
+        gap: 20px; /*to add space between the items*/
+        flex-wrap: wrap; /*to wrap the items in the next line*/
+    
+        }
+    .items{
+       display:grid;/*to use grid*/
+       align-items: center;
+       overflow: hidden;/*to hide the overflow*/
+       box-shadow: 0 4px 8px rgba(0,0,0,0.2);/* shadow effect */
+    }
+    /*styling images in items*/
+    .items img{
+        width: 270PX;
+        height: 270px;
+        display: block;/*to make the image block*/ 
+    }
+    .items strong{
+        text-align: center;/*to center the text*/
+        font-size: 20px;/*to set the font size*/
+        color: black;/*to set the color of the text*/
+        font-family: Arial, Helvetica, sans-serif;/*to set the font family*/
+    }
+    .search-container input[type="text"]{
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+      background-color: white;
+      color: black;
+    }
+    .search-container .search-button{
+      padding: 8px 12px;
+      background-color:black ;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor:pointer;
+      font-weight: bold;
+    }
+ p {
+      color: #000;
+      font-family:Arial, Helvetica, sans-serif;
+      text-align: center;
+      font-size: 14px;
+ }
+
+
+    footer {
+      background-color: white;
+      color: black;
+      text-align: center;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+
+    footer a:visited {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+   
+  </style>
+</head>
+<body>
+  <div class="main-content">
+    <header>
+      <h1 style="color:black ;">
+       <img src="/src/image/MASHoes.JP.JPG" alt="logo" width="150px" height="150px">
+        MASH SHOES
+      </h1>
+    </header>
+
+    <div class="navbar">
+  <a href="/src/html/product1.html">Products</a>
+  <a href="/src/html/blog.html">Blog</a>
+  <a href="/src/html/contact.html">Contact Us</a>
+  <a href="/src/html/about.html">About Us</a>
+  <a href="/src/html/research.html">Research</a>
+  <div class="search-container">
+    <input type="text" placeholder="Search" >
+    <button class="search-button">Search</button>
+  </div>
+      </div>
+   <strong> 
+    <p>For the Run, the Walk, the Win. <br>
+    <!--use of paragraph tag in side strong tag to highlight the content of paragraph -->
+      Feet First Since 2025.
+    </p>
+  </strong>
+    <!--use of flex-->
+    <div class="container">
+        <div class="items"><!--use of div tag-->
+          <a href="/src/html/men.html"><img src="/src/image/men6.jpg" alt="men6"></a>
+           <strong>MEN</strong>
+        </div>
+        <div class="items">
+            <a href="/src/html/women.html"><img src="/src/image/women7.jpg" alt="women7"></a>
+           <P><strong>WOMEN</strong></P>
+        </div>
+        <div class="items">
+          <a href="/src/html/heel.html"><img src="/src/image/heel17.jpg" alt="heel17"></a>
+         <P><strong>HEELS</strong></P>
+      </div>
+      <div class="items">
+        <a href="/src/html/kids.html"><img src="/src/image/kid12.jpg" alt="kid12"></a>
+       <P><strong>KIDS</strong></P>
+    </div>
+    </div>
+  <h1 style="text-align:center;color: #000;font-family:Arial, Helvetica, sans-serif;">BEST SELLERS</h1>
+  <div class="grid-container">
+    <div class="card">
+     <img src="/src/image/men3.jpg" alt="men4">
+      <h3></h3>
+      <p>Starting at $100</p>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+      </div>
+    <div class="card">
+      <img src="/src/image/women9.jpg">
+       <h3></h3>
+      <p>Starting at $120</p>
+      <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+       </div>
+      
+     <div class="card">
+        <img src="/src/image/kid2.jpg">
+       <p>Starting at $90</p>
+       <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+        </div>
+      <div class="card">
+         <img src="/src/image/heel2.jpg">
+         
+         <p>Starting at $150</p>
+         <button class="buy-btn" onclick="location.href='/src/html/buy.html'">Buy</button>
+         </div>
+        </div>
+  <footer>
+    <p>&copy; 2025 MASH SHOES, All rights reserved &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="/src/html/terms.html">Terms Of Sale</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+      
+      <a href="/src/html/use.html">Terms Of Use</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+      
+      <a href="/src/html/use.html">Privacy Policy</a>
+      
+    </p>
+  </footer>
+</body>
+</html>
